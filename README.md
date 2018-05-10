@@ -20,14 +20,15 @@
 
 > 1. **assets**目录存放图片。
 > 2. **common**目录下的**commonVar.js**存放全局公共变量。（在此切换开发，生产，测试环境的domain，与roadhogrc打包目录）
-> 3. **componments**目录存放公共组件。
+> 3. **components**目录存放公共组件。
 > 4. **models**目录存放页面对应的model。
 > 5. **pages**目录存放各个页面。
 > 6. **services**目录存放各页面请求。
 > 7. **utils**目录下的**request.js**封装请求方法。
 > 8. **index.ejs**为html入口。
-> 9. **index.less**为全局样式。
-> 10. **router.jsx**为路由注册地址与对应models注册地址。**注意**：原来各项目models注册地址为index.js，现迁移到router.jsx。
+> 9. **index.js**为dva注册入口。
+> 10. **index.less**为全局样式。
+> 11. **router.jsx**为路由注册地址与对应models注册地址。**注意**：原来各项目models注册地址为index.js，现迁移到router.jsx。
 
 # 三·注意事项
 
@@ -40,4 +41,6 @@
 > 2. pages目录下的index.jsx文件映射state到组件时，应解构到对应的namespace即可，不要在此解构namespace的属性以保持代码整洁性。
 > 3. 各路由注册，方法名，请求地址，namespace下的变量等都需提供明确注释信息。
 > 4. 如果修改他人的代码请将原来的代码注释掉并注明修改原因及修改时间。
+> 5. 变量，函数等命名采用驼峰式写法;样式className，使用下划线“-”;文件名称大小写应与现有文件保持一致。
+
 
