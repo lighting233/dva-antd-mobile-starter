@@ -1,7 +1,7 @@
 import React from 'react';
 import {Flex} from 'antd-mobile';
 import {routerRedux} from 'dva/router';
-import style from './view.less';
+import styles from './view.less';
 
 class Login extends React.Component {
 
@@ -16,7 +16,7 @@ class Login extends React.Component {
     const { name } = login;
 
     return (
-      <div className={style.name}>
+      <div className={styles.name}>
         { name }
       </div>
     );

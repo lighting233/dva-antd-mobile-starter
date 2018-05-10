@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import style from './topBar.less';
+import styles from './topBar.less';
 import {routerRedux} from 'dva/router';
 import backIcon from '../../assets/left.png'
 import jia from '../../assets/jia.png'
@@ -12,7 +12,7 @@ class TopBar extends Component {
   }
 
   render() {
-    const {title, showEdit, goBack, addMan, dispatch, children} = this.props;
+    const {title, showEdit, goBack, addClick, dispatch, children, iconRight, backShow} = this.props;
 
     //后退
     const normalBack = () => {
@@ -21,21 +21,24 @@ class TopBar extends Component {
 
     return (
       <div>
-        <div className={style.container}>
+        <div className={styles.container}>
           {
             title ?
-              <div className={style.main}>
+              <div className={styles.main}>
                 {title}
               </div>
               :
               children
           }
-          <div className={style.left_img} onClick={goBack ? goBack : normalBack}>
-            <img src={backIcon} alt=""/>
-          </div>
           {
-            showEdit && <div className={style.right_img} onClick={addMan}>
-              <img src={jia} alt=""/>
+            backShow ? '' :
+              <div className={styles.left_img} onClick={goBack ? goBack : normalBack}>
+                <img src={backIcon} alt=""/>
+              </div>
+          }
+          {
+            showEdit && <div className={styles.right_img} onClick={addClick}>
+              <img src={iconRight ? iconRight : jia} alt=""/>
             </div>
           }
         </div>

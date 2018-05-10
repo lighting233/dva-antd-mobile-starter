@@ -1,7 +1,7 @@
 import React from 'react';
 import {Flex} from 'antd-mobile';
 import {routerRedux} from 'dva/router';
-import style from './view.less';
+import styles from './view.less';
 import Main from '../../components/Main/main';
 
 class ListPage extends React.Component {
@@ -18,7 +18,7 @@ class ListPage extends React.Component {
 
     return (
       <Main location={location} dispatch={dispatch}>
-        <div className={style.name}>
+        <div className={styles.name}>
           { name }
         </div>
       </Main>

@@ -1,0 +1,130 @@
+::-webkit-scrollbar{
+  display:none;
+}
+.list_main {
+  width: 90%;
+  margin: 0 auto 2rem;
+  overflow-y: auto;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.list_container {
+  background: #FFFFFF;
+  box-shadow: 0 .1rem .5rem 0 rgba(0,0,0,0.20);
+  border-radius: .5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  padding: 3rem 1.5rem 1rem;
+}
+.title_bar {
+  position: absolute;
+  left: 1.5rem;
+  top: -1.5rem;
+  background-image: linear-gradient(-180deg, #FB9220 0%, #FF6100 100%);
+  box-shadow: 0 .1rem .5rem 0 rgba(255,127,2,0.30);
+  border-radius: .5rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1rem;
+  font-family: PingFangSC-Regular;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list_container_in {
+  padding-top: 1rem;
+  position: relative;
+  height: 8rem;
+  box-shadow: inset 0 -1px 0 0 #F0F0F0;
+}
+.list_in_left {
+  display: inline-block;
+}
+.list_in_right {
+  display: inline-block;
+  width:70%;
+  height: 5rem;
+  position: absolute;
+  left: 8rem;
+}
+.img_box {
+  width: 5rem;
+  height: 5rem;
+}
+.img_box img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.title, .price, .type {
+  display: inline-block;
+}
+.title {
+  font-family: PingFangSC-Regular;
+  font-size: 1.4rem;
+  color: #333333;
+  margin-bottom: .5rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comment {
+  font-family: PingFangSC-Regular;
+  font-size: 1.2rem;
+  color: #999999;
+}
+.type {
+  font-family: PingFangSC-Regular;
+  font-size: 1.2rem;
+  color: #999999;
+}
+
+@media screen and (max-width: 340px) {
+  .list_container_in {
+    padding: 1rem;
+    position: relative;
+    height: 7rem;
+  }
+  .list_in_right {
+    display: inline-block;
+    width:70%;
+    height: 6rem;
+    position: absolute;
+    left: 8rem;
+  }
+  .img_box {
+    width: 5rem;
+    height: 5rem;
+  }
+  .img_box img{
+    width: 100px;
+  }
+  .title {
+    font-family: PingFangSC-Regular;
+    font-size: 2.3rem;
+    color: #333333;
+    margin-bottom: .5rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .comment {
+    font-size: 2.2rem;
+    color: #999999;
+    font-family: PingFangSC-Light;
+    font-weight: normal;
+  }
+  .type {
+    font-family: PingFangSC-Light;
+    font-size: 2.2rem;
+    color: #999999;
+  }
+}
+
+
+

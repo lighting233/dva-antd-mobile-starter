@@ -1,7 +1,7 @@
 import React from 'react';
 import {Flex} from 'antd-mobile';
 import {routerRedux} from 'dva/router';
-import style from './view.less';
+import styles from './view.less';
 import Main from '../../components/Main/main';
 import TopBar from '../../components/TopBar/topBar';
 
@@ -21,14 +21,16 @@ class HomePage extends React.Component {
       <Main location={location} dispatch={dispatch}>
         <TopBar
           title={null} //标题,传入null时在children自定义中间标题功能。
-          showEdit={true} //是否显示右侧添加按钮
           goBack={null} //自定义后退路由
-          addMan={null} //新增能人
+          backShow={false} //是否显示后退图标,默认值为false，true隐藏。
+          iconRight={null} //自定义右侧按钮图标
+          showEdit={true} //是否显示右侧添加按钮
+          addClick={null} //新增按钮点击事件
           dispatch={dispatch}
         >
-          <div className={style.main} >自定义标题</div>
+          <div className={styles.main} >自定义标题</div>
         </TopBar>
-        <div className={style.name}>
+        <div className={styles.name}>
           { name }
         </div>
       </Main>
